@@ -1,0 +1,11 @@
+numpy
+pandas
+opencv-python
+easyocr
+pillow
+pdf2image
+python-dateutil
+streamlit
+matplotlib
+plotly
+pdfplumber
