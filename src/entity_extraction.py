@@ -1,6 +1,6 @@
 # src/entity_extraction.py
 import re
-from dateutil import parser as dateparser
+from dateutil  import parser as dateparser
 
 def extract_pan(text):
     # PAN pattern: 5 letters + 4 digits + 1 letter

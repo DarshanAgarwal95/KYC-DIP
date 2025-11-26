@@ -10,11 +10,11 @@ st.title("KYC Document Intelligence Platform (KYC-DIP) — Demo (EasyOCR only)")
 
 col1, col2 = st.columns([1,1])
 with col1:
-    uploaded = st.file_uploader("Upload KYC Document (image)", type=['png','jpg','jpeg'])
+    uploaded = st.file_uploader("sUpload KYC Document (image)", type=['png','jpg','jpeg'])
     st.write("Example expected data (for validation)")
-    name = st.text_input("Expected NAME", value="Darshan Agarwal")
-    pan = st.text_input("Expected PAN", value="ABCDE1234F")
-    dob = st.text_input("Expected DOB (YYYY-MM-DD)", value="1995-12-01")
+    name = st.text_input("Expected NAME", value="")
+    pan = st.text_input("Expected PAN", value="")
+    dob = st.text_input("Expected DOB (DD-MM-YYYY)", value="")
     run_btn = st.button("Run KYC")
 
 with col2:
@@ -46,4 +46,6 @@ if uploaded and run_btn:
     pil_img = cv2_to_pil(highlighted_cv2)
     st.subheader("Highlighted Entities")
     st.image(pil_img, use_column_width=True)
+    
+
 
