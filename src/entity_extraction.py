@@ -5,7 +5,7 @@ from dateutil  import parser as dateparser
 def extract_pan(text):
     # PAN pattern: 5 letters + 4 digits + 1 letter
     # Many PANs are uppercase; remove spaces to match patterns
-    cleaned = text.replace(" ", "").upper()clear
+    cleaned = text.replace(" ", "").upper()
     matches = re.findall(r'\b[A-Z]{5}[0-9]{4}[A-Z]\b', cleaned)
     return matches
 
